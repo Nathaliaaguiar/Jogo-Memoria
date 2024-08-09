@@ -1,11 +1,28 @@
 body {
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     min-height: 100vh;
     background-color: #f7bfeb;
     margin: 0;
     font-family: sans-serif;
+}
+
+h1 {
+    font-size: 2rem;
+    color: #f0439a; 
+    margin: 0;
+    padding: 10px 0;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+h2 {
+    font-size: 1.1rem;
+    color: #52163c; 
+    margin: 0;
+    padding-bottom: 20px;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
 }
 
 .memory-game {
@@ -44,7 +61,7 @@ body {
 }
 
 .memory-card .front-face {
-    background-image: url(images.jpg);
+    background-image: url(img/images.jpg);
 }
 
 .memory-card .back-face {
@@ -69,18 +86,29 @@ body {
         gap: 5px;
     }
 
-    .memory-card {
-        padding-top: 100%; /* Mantém a proporção 1:1 */
+    h1 {
+        font-size: 2.5rem;
+    }
+
+    h2 {
+        font-size: 1.2rem;
     }
 }
 
-/* Ajustes para telas grandes (monitores grandes e notebooks) */
 @media (min-width: 1024px) {
     .memory-game {
         grid-template-columns: repeat(4, 1fr);
     }
 
     .memory-card {
-        padding-top: 80%;
+        padding-top: 70%;
+    }
+
+    h1 {
+        font-size: 3.5rem;
+    }
+
+    h2 {
+        font-size: 1.7rem;
     }
 }
